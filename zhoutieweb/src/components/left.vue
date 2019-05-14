@@ -1,7 +1,7 @@
 <template>
     <div>
         <ul class="home_left">
-            <li class="now">
+            <li class="lists now">
                 <a href="#"><li>组织架构</li></a>
             </li>
             <li class="lists">
@@ -32,7 +32,12 @@
 <script>
 export default {
 		mounted(){
-			          
+              $(".lists").click(function(){
+                  $(this).addClass("now")
+                  $(this).siblings().removeClass("now")
+              })
+              
+                  
         }    
 }
 </script>
