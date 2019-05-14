@@ -6,7 +6,7 @@
 			<left></left>
 		</div>
 		<div class="right" :style="myheight">
-			<router-view>111</router-view>
+			<router-view></router-view>
 		</div>
 	</div>
 </template>

@@ -20,7 +20,7 @@
                 <a href="#"><li>党员缴费</li></a>
             </li>
             <li class="lists">
-                <a href="#"><li>党内帮扶</li></a>
+                <a href="#/home/partyAssist"><li>党内帮扶</li></a>
             </li>
             <li class="lists">
                 <a href="#"><li>民主评议</li></a>
