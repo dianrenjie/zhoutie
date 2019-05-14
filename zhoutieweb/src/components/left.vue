@@ -42,6 +42,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 	@import url("../../static/css/left.css");           
 </style>

@@ -23,7 +23,7 @@
 			return{
 				
 				myheight:{
-					"min-height":880+"px"
+					height:window.innerHeight-98+"px"
 				}
 			}
 		},
