@@ -20,32 +20,6 @@ export default {
 </script>
 
 <style scoped>
-	.header_wrap{
-		height: 98px;
-		background:rgb(244, 67, 54);
-		overflow: hidden;
-	}
-    .header_left{
-		float: left;
-	}
-	.header_right{
-		float: right;
-	}
-	.logo{
-		width: 70px;
-		height: 70px;
-		background: url(../assets/logo.png);
-		background-size: cover;
-		margin: 15px 20px 60px 60px ;
-		float: left;
-	}
-    .title{
-		font-size: 30px;
-		color: white;
-		font-weight: bold;
-		line-height: 98px;
-		float: left;
-		font-family: '宋体';
-	}    
+	@import url("../../static/css/header.css");
 </style>
 

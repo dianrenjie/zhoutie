@@ -32,28 +32,11 @@
 <script>
 export default {
 		mounted(){
-			$('.home_left>li').click(function(){
-                $('.lists').eq(index).stop().slideToggle();
-                $('.lists').eq(index).siblings('.lists').slideUp();
-                $(this).addClass('now').siblings('li').removeClass('now')
-            })            
+			          
         }    
 }
 </script>
 
 <style>
-	.home_left{
-		color: black;	
-	}
-	a{
-		color: black;
-		text-decoration: none;
-	} 
-	.home_left li{
-		line-height: 92px;
-        text-align: center
-	}
-	.now{
-		background: rgb(255, 237, 235);
-	}           
+	@import url("../../static/css/left.css");           
 </style>

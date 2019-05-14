@@ -1,0 +1,14 @@
+.home_left{
+    color: black;	
+}
+a{
+    color: black;
+    text-decoration: none;
+} 
+.home_left li{
+    line-height: 92px;
+    text-align: center
+}
+.now{
+    background: rgb(255, 237, 235);
+}

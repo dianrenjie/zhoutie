@@ -38,14 +38,5 @@
 </script>
 
 <style scoped>
-	.left{
-		width: 18%;
-		float: left;		
-		
-	}
-	.right{
-		width: 82%;
-		float: left;
-		overflow: hidden;
-	}
+	@import url("../../static/css/home.css");
 </style>
