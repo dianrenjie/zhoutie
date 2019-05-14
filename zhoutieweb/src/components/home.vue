@@ -2,11 +2,11 @@
 	<div>
 		<my-header></my-header>
 		<div style="clear: both;"></div>
-		<div class="left" :style="myheight">
+		<div class="left" id="left">
 			<left></left>
 		</div>
 		<div class="right" :style="myheight">
-			<router-view>111</router-view>
+			<router-view></router-view>
 		</div>
 	</div>
 </template>
@@ -21,18 +21,17 @@
 		},
 		data(){
 			return{
+				
 				myheight:{
-					height:window.innerHeight-98+'px'
+					"min-height":880+"px"
 				}
 			}
 		},
 		mounted(){
-			var _this=this;
-			window.onresize=function(){  //当服务器窗口大小发生变化时执行函数
-				_this.myheight={
-					height:window.innerHeight-98+'px'
-				}
-			}
+			
+			
+			
+			
 		}
 	}
 </script>

@@ -1,0 +1,38 @@
+.all-img-box{
+    width:95%;
+    margin: auto;
+    margin-top: 30px;
+}
+.img-box{
+    width: 18%;
+    margin-left:2.4%; 
+    height:300px;
+    margin-top: 30px;
+    float: left;
+}
+.img-box:first-child{
+    margin-left: 0;
+}
+.img_box{
+    width:100%;
+    height:250px;
+
+}
+
+.img_box img{
+    width:100%;
+    height: 100%;
+}
+.img-title{
+    width:100%;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    background: white;
+    border: 1px solid rgb(241, 243, 244);
+    overflow: hidden;
+display: -webkit-box;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+
+}

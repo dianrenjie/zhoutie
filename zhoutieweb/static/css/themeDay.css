@@ -1,0 +1,24 @@
+.cont-box{
+    
+    width:95%;
+    margin: auto;
+    margin-top: 50px;
+    
+}
+.cont-box li img{
+    width:7px;
+    height:7px;
+}
+.cont-box li{
+    width:50%;
+    height:50px;
+    float: left;
+    
+}
+.title{
+    margin-left: 20px;
+}
+.time{
+    margin-left: 50px;
+    color: #A2A1A1;
+}

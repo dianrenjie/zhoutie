@@ -2,28 +2,28 @@
     <div>
         <ul class="home_left">
             <li class="lists now">
-                <a href="#"><li>组织架构</li></a>
+                <a href="#"><img src="../assets/zuzhi.png" alt=""><span>组织架构</span></a>
             </li>
             <li class="lists">
-                <a href="#"><li>党员名册</li></a>
+                <a href="#"><img src="../assets/mingce.png" alt=""><span>党员名册</span></a>
             </li>
             <li class="lists">
-                <a href="#"><li>陈地建设</li></a>
+                <a href="#/home/zhendi"><img src="../assets/chendi.png" alt=""><span>陈地建设</span></a>
             </li>
             <li class="lists">
-                <a href="#"><li>三会一课</li></a>
+                <a href="#"><img src="../assets/sanhui.png" alt=""><span>三会一课</span></a>
             </li>
             <li class="lists">
-                <a href="#"><li>主题党日</li></a>
+                <a href="#/home/themeday"><img src="../assets/dangri.png" alt=""><span>主题党日</span></a>
             </li>
             <li class="lists">
-                <a href="#"><li>党员缴费</li></a>
+                <a href="#"><img src="../assets/jiaofei.png" alt=""><span>党员缴费</span></a>
             </li>
             <li class="lists">
-                <a href="#"><li>党内帮扶</li></a>
+                <a href="#"><img src="../assets/bangfu.png" alt=""><span>党内帮扶</span></a>
             </li>
             <li class="lists">
-                <a href="#"><li>民主评议</li></a>
+                <a href="#"><img src="../assets/pingyi.png" alt=""><span>民主评议</span></a>
             </li>
         </ul>
     </div>
