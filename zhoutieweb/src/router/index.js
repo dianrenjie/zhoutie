@@ -4,6 +4,8 @@ import HelloWorld from '@/components/HelloWorld'
 import home from '@/components/home'
 import TheneDay from "@/components/themeDay"
 import Zhendi from "@/components/zhendi"
+import partyAssist from '@/components/partyAssist'
+import partyText from '@/components/partyText'
 
 Vue.use(Router)
 
@@ -15,7 +17,9 @@ export default new Router({
       component: home,
       children:[
         {path:"themeday",component:TheneDay},
-        {path:"zhendi",component:Zhendi}
+        {path:"zhendi",component:Zhendi},
+        {path:'partyAssist',component:partyAssist},
+        {path:'partyText',component:partyText}
       ]
     }
   ]
