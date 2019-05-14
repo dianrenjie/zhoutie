@@ -23,12 +23,11 @@
 			return{
 				
 				myheight:{
-					height:window.innerHeight-98+"px"
+					"min-height":window.innerHeight-98+"px"
 				}
 			}
 		},
 		mounted(){
-			
 			
 			
 			

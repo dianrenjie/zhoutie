@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="box">
     <div class="hint">
       <span class="return" @click="back">党内帮扶列表</span> > 正文
     </div>
