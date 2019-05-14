@@ -22,7 +22,7 @@
 		data(){
 			return{
 				myheight:{
-					height:window.innerHeight-50+'px'
+					height:window.innerHeight-98+'px'
 				}
 			}
 		},
@@ -30,7 +30,7 @@
 			var _this=this;
 			window.onresize=function(){  //当服务器窗口大小发生变化时执行函数
 				_this.myheight={
-					height:window.innerHeight-50+'px'
+					height:window.innerHeight-98+'px'
 				}
 			}
 		}
