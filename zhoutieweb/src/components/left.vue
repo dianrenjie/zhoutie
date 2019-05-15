@@ -5,7 +5,7 @@
                 <a href="#"><img src="../assets/zuzhi.png" alt=""><span>组织架构</span></a>
             </li>
             <li class="lists">
-                <a href="#"><img src="../assets/mingce.png" alt=""><span>党员名册</span></a>
+                <a href="#/home/partyMember"><img src="../assets/mingce.png" alt=""><span>党员名册</span></a>
             </li>
             <li class="lists">
                 <a href="#/home/zhendi"><img src="../assets/chendi.png" alt=""><span>陈地建设</span></a>

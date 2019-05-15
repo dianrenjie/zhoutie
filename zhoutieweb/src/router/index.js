@@ -7,6 +7,7 @@ import Zhendi from "@/components/zhendi"
 import partyAssist from '@/components/partyAssist'
 import partyText from '@/components/partyText'
 import cost from '@/components/cost'
+import partyMember from '@/components/partyMember'
 
 Vue.use(Router)
 
@@ -21,7 +22,8 @@ export default new Router({
         {path:"zhendi",component:Zhendi},
         {path:'partyAssist',component:partyAssist},
         {path:'partyText',component:partyText},
-        {path:'cost',component:cost}
+        {path:'cost',component:cost},
+        {path:'partyMember',component:partyMember}
       ]
     }
   ]
