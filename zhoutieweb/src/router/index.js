@@ -6,6 +6,7 @@ import TheneDay from "@/components/themeDay"
 import Zhendi from "@/components/zhendi"
 import partyAssist from '@/components/partyAssist'
 import partyText from '@/components/partyText'
+import cost from '@/components/cost'
 
 Vue.use(Router)
 
@@ -19,7 +20,8 @@ export default new Router({
         {path:"themeday",component:TheneDay},
         {path:"zhendi",component:Zhendi},
         {path:'partyAssist',component:partyAssist},
-        {path:'partyText',component:partyText}
+        {path:'partyText',component:partyText},
+        {path:'cost',component:cost}
       ]
     }
   ]

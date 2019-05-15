@@ -1,0 +1,7 @@
+.el-table thead.is-group th {
+    text-align: center;
+}
+.app{
+    width: 85%;
+    margin: auto;
+}

@@ -17,7 +17,7 @@
                 <a href="#/home/themeday"><img src="../assets/dangri.png" alt=""><span>主题党日</span></a>
             </li>
             <li class="lists">
-                <a href="#"><img src="../assets/jiaofei.png" alt=""><span>党员缴费</span></a>
+                <a href="#/home/cost"><img src="../assets/jiaofei.png" alt=""><span>党员缴费</span></a>
             </li>
             <li class="lists">
                 <a href="#/home/partyAssist"><img src="../assets/bangfu.png" alt=""><span>党内帮扶</span></a>
