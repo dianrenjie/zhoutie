@@ -1,8 +1,8 @@
 
 
 <template>
-  <div class="app">
-    <el-table :data="tableData" style="width: 100%;margin:auto;">
+  <div>
+    <el-table :data="tableData" style="width: 85%;margin: 20px auto;">
       <el-table-column prop="date" label="序号" width="100"></el-table-column>
 
       <el-table-column prop="name" label="姓名" width="100"></el-table-column>
