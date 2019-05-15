@@ -5,3 +5,6 @@
     width: 85%;
     margin: auto;
 }
+.el-table__header{
+    margin:auto !important;
+}
