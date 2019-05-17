@@ -9,7 +9,11 @@ import partyText from '@/components/partyText'
 import threeClass from '@/components/threeClass'
 import cost from '@/components/cost'
 import partyMember from '@/components/partyMember'
+<<<<<<< HEAD
 import jiaGou from "@/components/jiagou"
+=======
+import threeClass from '@/components/threeClass'
+>>>>>>> c6f53a34d3214f926bd517551c132535bd8cadfc
 
 
 Vue.use(Router)
