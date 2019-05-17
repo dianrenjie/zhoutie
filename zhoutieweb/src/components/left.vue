@@ -23,7 +23,7 @@
                 <a href="#/home/partyAssist"><img src="../assets/bangfu.png" alt=""><span>党内帮扶</span></a>
             </li>
             <li class="lists">
-                <a href="#"><img src="../assets/pingyi.png" alt=""><span>民主评议</span></a>
+                <a href="#/home/democratic"><img src="../assets/pingyi.png" alt=""><span>民主评议</span></a>
             </li>
         </ul>
     </div>

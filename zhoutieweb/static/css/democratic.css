@@ -1,0 +1,151 @@
+
+.header{
+    width: 75%;
+    height: 55px;
+    margin: 30px auto;
+}
+.time,.address{
+    text-indent:10px;
+    width: 49%;
+    height: 55px;
+    float: left;
+    line-height: 55px;
+    background: white;
+    border-radius: 5px;
+}
+.address{
+    margin-left: 2%;
+}
+.body{
+    width: 75%;
+    height: 320px;
+    margin: 30px auto;
+}
+.body_hd{
+    width: 100%;
+    height: 90px;
+    margin: 30px auto;
+}
+.statistics{
+    float: left;
+    width: 20.5%;
+    height: 88px;
+    margin-left: 6%;
+    border-radius: 5px;
+}
+.statistics:first-child{
+    margin-left: 0;
+    background: rgb(251, 153, 147)
+}
+.statistics:nth-child(2){
+    background: rgb(91, 146, 246)
+}
+.statistics:nth-child(3){
+    background: rgb(151, 121, 241)
+}
+.statistics:last-child{
+    background: rgb(41, 223, 241)
+}
+.logo{
+    width: 40%;
+    height: 88px;
+    float: left; 
+    text-align: center;
+}
+.logo img{
+    width: 60px;
+    height: 60px;
+    margin-top: 13px;
+}
+.number{
+    width: 58%;
+    height: 88px;
+    float: left;
+    margin-left: 2%;
+}
+.person{
+    color: white;
+    font-size: 26px;
+    margin-top: 13px;
+}
+.name{
+    color: white;
+    font-size: 10px;
+    margin-top: 5px;
+}
+.body_bd{
+    width: 100%;
+    height: 215px;
+    margin:  auto;
+}
+.left,.right{
+    width: 49%;
+    height: 215px;  
+    background: white;
+    float: left; 
+}
+.right{
+    margin-left: 2%;
+}
+.left_title{
+    height: 40px;
+}
+.evaluate{
+    font-size: 15px;
+    float: left;
+    line-height: 40px;
+    text-indent:20px;
+}
+.ratio{
+    color: silver;
+    font-size: 12px;
+    float: right;
+    line-height: 40px;
+    padding-right: 20px;
+}
+.excellent p{
+    float: left;
+}
+.party_left{
+    width: 20%;
+    float: left;
+}
+.party_right{
+    width: 80%;
+    float: left;
+}
+.party_left p{
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: slategray;
+}
+.party_left p:first-child{
+    margin-top: 15px;
+}
+.el-progress {
+    margin-bottom: 20px;
+}
+.el-progress:first-child {
+    margin-top: 15px;
+}
+.excellent{
+    font-size: 15px;
+    line-height: 40px;
+    text-indent:20px;
+}
+.foot{
+    width: 75%;
+    height: 280px;
+    margin:  auto;
+    background:white;
+}
+.disqualification{
+    font-size: 15px;
+    line-height: 50px;
+    text-indent:20px;
+}
+.form{
+    width: 95%;
+    margin: auto;
+}
