@@ -8,7 +8,8 @@ import $ from 'jquery'
 import 'element-ui/lib/theme-chalk/index.css';
 import router from './router'
 import store from "./vuex/store"
-
+import Vue2OrgTree from 'vue2-org-tree';
+Vue.use(Vue2OrgTree)
 Vue.prototype.$axios=axios
 Vue.use(ElementUI);
 

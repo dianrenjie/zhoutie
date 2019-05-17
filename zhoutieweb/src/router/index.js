@@ -8,6 +8,7 @@ import partyAssist from '@/components/partyAssist'
 import partyText from '@/components/partyText'
 import cost from '@/components/cost'
 import partyMember from '@/components/partyMember'
+import jiaGou from '@/components/jiagou'
 
 Vue.use(Router)
 
@@ -23,7 +24,8 @@ export default new Router({
         {path:'partyAssist',component:partyAssist},
         {path:'partyText',component:partyText},
         {path:'cost',component:cost},
-        {path:'partyMember',component:partyMember}
+        {path:'partyMember',component:partyMember},
+        {path:'jiagou',component:jiaGou}
       ]
     }
   ]
