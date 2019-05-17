@@ -1,0 +1,32 @@
+.wrap {
+  width: 95%;
+  background: white;
+  margin: auto;
+}
+
+.el-tabs {
+  width: 90%;
+  margin: 20px auto;
+}
+.cont-box {
+  width: 95%;
+  margin: auto;
+  margin-top: 25px;
+}
+.cont-box li img {
+  width: 7px;
+  height: 7px;
+}
+
+.cont-box li {
+  height: 50px;
+}
+
+.title {
+  margin-left: 20px;
+}
+
+.time {
+  margin-left: 100px;
+  color: #A2A1A1;
+}
