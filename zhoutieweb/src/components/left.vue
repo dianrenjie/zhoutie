@@ -2,7 +2,7 @@
     <div>
         <ul class="home_left">
             <li class="lists now">
-                <a href="#"><img src="../assets/zuzhi.png" alt=""><span>组织架构</span></a>
+                <a href="#/home/jiagou"><img src="../assets/zuzhi.png" alt=""><span>组织架构</span></a>
             </li>
             <li class="lists">
                 <a href="#/home/partyMember"><img src="../assets/mingce.png" alt=""><span>党员名册</span></a>
