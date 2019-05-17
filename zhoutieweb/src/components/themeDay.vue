@@ -43,20 +43,24 @@ export default {
   methods: {
     getData() {
       var _this = this;
+      var data=this.qs.stringify({organ_id:"2"})
       this.$axios({
-        url: "https://zhoutie.xiaohecheng.com/api/api/news_list",
-        method: "post",
-        data: {
-          organ_id: 1
-        }
-      }).then(res => {
-        console.log(res);
-        _this.arr = res.data;
-      });
-    },
-    mounted() {
-      this.getData();
+        url: "/api/api/news_list",
+        header:_this.header,
+        method: "POST",
+        data: data
+      }).then(function(res){
+        console.log(res.data);
+        _this.arr = res.data.data;
+      })
+     
     }
+    
+  },
+  mounted() {
+      this.getData();
+      
+      
   }
 };
 </script>

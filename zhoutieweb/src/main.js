@@ -3,14 +3,17 @@
 import Vue from 'vue'
 import axios from "axios"
 import ElementUI from 'element-ui';
-import $ from 'jquery'
+import $ from 'jquery';
+import QS from "qs";
 
 import 'element-ui/lib/theme-chalk/index.css';
 import router from './router'
 import store from "./vuex/store"
 import Vue2OrgTree from 'vue2-org-tree';
-Vue.use(Vue2OrgTree)
-Vue.prototype.$axios=axios
+Vue.use(Vue2OrgTree);
+Vue.prototype.$axios=axios;
+Vue.prototype.qs = QS;
+Vue.prototype.header={'Content-Type':'application/x-www-form-urlencoded'};
 Vue.use(ElementUI);
 
 
