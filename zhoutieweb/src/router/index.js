@@ -14,6 +14,7 @@ import democratic from "@/components/democratic"
 
 
 
+
 Vue.use(Router)
 
 export default new Router({
