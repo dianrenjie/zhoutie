@@ -13,6 +13,7 @@ import jiaGou from "@/components/jiagou"
 
 
 
+
 Vue.use(Router)
 
 export default new Router({

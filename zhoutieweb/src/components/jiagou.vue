@@ -1,16 +1,7 @@
 <template>
   <div>
     <div class="text-center" style="text-align:center;margin-top:50px;">
-      <vue2-org-tree
-        name="test"
-        :data="data"
-        :horizontal="horizontal"
-        
-        :label-class-name="labelClassName"
-        
-        @on-expand="onExpand"
-        @on-node-click="onNodeClick"
-      />
+      
     </div>
   </div>
 </template>
