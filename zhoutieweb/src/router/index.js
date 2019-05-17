@@ -6,9 +6,9 @@ import TheneDay from "@/components/themeDay"
 import Zhendi from "@/components/zhendi"
 import partyAssist from '@/components/partyAssist'
 import partyText from '@/components/partyText'
+import threeClass from '@/components/threeClass'
 import cost from '@/components/cost'
 import partyMember from '@/components/partyMember'
-import threeClass from '@/components/threeClass'
 import jiaGou from "@/components/jiagou"
 
 
