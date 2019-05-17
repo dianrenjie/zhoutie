@@ -5,7 +5,7 @@
 				
 			</div>
 			<div class="title">
-				周铁党建平台
+				
 			</div>
 		</div>
 		<div class="header_right"> 

@@ -1,28 +1,70 @@
 <template>
   <div class="box">
-    <div class="hint">
+    <div class="hint" v-if="type==2">
       <span class="return" @click="back">党内帮扶列表</span> > 正文
     </div>
-    <div class="title">加强党内帮扶，共促关爱风尚——中共欧派党委积极开展困难党员走访慰问</div>
+    <div class="hint" v-if="type==1">
+      <span class="return" @click="back">主题党日列表</span> > 正文
+    </div>
+    <div class="title">{{text.title}}</div>
     <div class="time">
-      2019-05-08 15:20
-      <img src="../assets/eye.png" alt> 125
+      {{text.time}}
+     
     </div>
 
-    <div class="text">
-      &nbsp;&nbsp;&nbsp;&nbsp;为加强党内关爱帮扶，让党员、干部和广大员工切身感受到党的关怀和温暖，中共欧派集团党委在元旦春节期间持续开展走访慰问生活困难党员、老党员和老干部活动。1月15日下午，集团党委书记姚良柏、党委副书记沈崇照、党委委员兼纪委书记李峰、党委委员黎兰等人代表欧派集团党委到江高镇蓼江村开展困难老党员走访慰问，带去组织的关怀和温暖，并送上慰问金、食用油、大米等物资。
-      <br>&nbsp;&nbsp;&nbsp;&nbsp;欧派党委对蓼江村困难老党员春节慰问活动至今已坚持持续开展了10年，充分体现了企业在发展的同时坚定地履行社会责任，受到了江高镇党委及蓼江村委的赞赏与肯定。慰问座谈会上,姚书记与8位受慰问的老党员进行了亲切交谈，了解他们目前的生活及健康状况。在谈到蓼江村近年来取得的喜人发展成就时，姚书记真诚地祝愿受慰问的老党员健康长寿，一起见证蓼江村美好的明天。
-      <br>&nbsp;&nbsp;&nbsp;&nbsp;1月11日上午，受集团党委委托，党委委员、纪委书记李峰同志、宁文同志、舒刚同志、温东岭同志一行前往因病离职党员同军虎家中开展新春慰问，同时，做好十九大精神的学习传达工作。临行前，李峰同志叮嘱因病行动不便的同军虎同志要保重身体，坚信有党的好政策，有欧派集团和社会各界的支持，生活会越来越好。
-      <br>&nbsp;&nbsp;&nbsp;&nbsp;接下来，欧派党委将继续开展各类党内帮扶及关爱活动，推进十九大精神及“两学一做”学习教育常态化制度化，在党员干部和集团内部形成关心帮助生活困难党员群众、尊重爱护老党员、老骨干、老模范的良好企业文化氛围。
+    <div class="text" v-html="text.content">
+     
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      type: this.$route.query.type,
+      id: this.$route.query.id,
+      text: {}
+    };
+  },
+  mounted() {
+    // 这是从主题党日进来的内容
+    if (this.type == 1) {
+      var that = this;
+      var data = this.qs.stringify({ id: that.id });
+      this.$axios({
+        url: "/api/api/news_detail",
+        header: that.header,
+        method: "POST",
+        data: data
+      }).then(res => {
+        console.log(res.data);
+        that.text = res.data.data;
+      });
+    }
+    // 这是从党内帮扶进来的内容
+    if (this.type == 2) {
+      var that = this;
+      var data = this.qs.stringify({ id: that.id });
+      this.$axios({
+        url: "/api/api/help_detail",
+        header: that.header,
+        method: "POST",
+        data: data
+      }).then(res => {
+        console.log(res.data);
+        that.text = res.data.data;
+      });
+    }
+  },
   methods: {
     back() {
-      window.location.href = "#/home/partyAssist";
+      if (this.type == 1) {
+        window.location.href = "#/home/themeDay";
+      }
+      if (this.type == 2) {
+        window.location.href = "#/home/partyAssist";
+      }
     }
   }
 };

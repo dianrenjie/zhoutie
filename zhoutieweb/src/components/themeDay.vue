@@ -3,7 +3,7 @@
     <ul class="cont-box">
       <li v-for="(v,i) in arr" :key="(v,i)">
         <img src="../assets/disc.png" alt>
-        <span class="title">{{v.title}}</span>
+        <a :href="`#/home/partyText?type=1&id=${v.id}`"><span class="title">{{v.title}}</span></a>
         <span class="time">{{v.time}}</span>
       </li>
     </ul>
@@ -43,7 +43,7 @@ export default {
   methods: {
     getData() {
       var _this = this;
-      var data=this.qs.stringify({organ_id:"2"})
+      var data=this.qs.stringify({organ_id:"14"})
       this.$axios({
         url: "/api/api/news_list",
         header:_this.header,

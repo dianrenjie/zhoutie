@@ -1,7 +1,73 @@
 <template>
   <div>
-    <div class="text-center" style="text-align:center;margin-top:50px;">
-      
+    <div class="all-box">
+      <div class="one-title title">党总支部书记：佃仁杰</div>
+      <div class="border"></div>
+      <div class="two-title title">党总支部副书记：佃仁杰</div>
+       <div class="border"></div>
+       <div class="title-box">
+           <div class="three-title">
+             委员：佃仁杰
+           </div>
+            <div class="three-title">
+             委员：佃仁杰
+           </div>
+            <div class="three-title">
+             委员：佃仁杰
+           </div>
+            <div class="three-title">
+             委员：佃仁杰
+           </div>
+            <div class="three-title">
+             委员：佃仁杰
+           </div>
+            <div class="three-title">
+             委员：佃仁杰
+           </div>
+            <div class="three-title">
+             委员：佃仁杰
+           </div>
+            <div class="three-title">
+             委员：佃仁杰
+           </div>
+           
+       </div>
+       <div class="border"></div>
+       <div class="title-box">
+           <div class="three-title">
+             XX支部书记：<br>
+             佃仁杰
+           </div>
+            <div class="three-title">
+             XX支部书记：<br>
+             佃仁杰
+           </div>
+           <div class="three-title">
+             XX支部书记：<br>
+             佃仁杰
+           </div>
+           <div class="three-title">
+             XX支部书记：<br>
+             佃仁杰
+           </div>
+           <div class="three-title">
+             XX支部书记：<br>
+             佃仁杰
+           </div>
+           <div class="three-title">
+             XX支部书记：<br>
+             佃仁杰
+           </div>
+           <div class="three-title">
+             XX支部书记：<br>
+             佃仁杰
+           </div>
+           <div class="three-title">
+             XX支部书记：<br>
+             佃仁杰
+           </div>
+           
+       </div>
     </div>
   </div>
 </template>
@@ -53,4 +119,5 @@ export default {
 };
 </script>
 <style scoped>
+@import url("../../static/css/jiagou.css");
 </style>

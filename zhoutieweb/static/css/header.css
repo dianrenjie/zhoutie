@@ -2,6 +2,7 @@
     height: 98px;
     background:rgb(244, 67, 54);
     overflow: hidden;
+    background: url(../../src/assets/logo.jpg);
 }
 .header_left{
     float: left;
@@ -12,7 +13,7 @@
 .logo{
     width: 70px;
     height: 70px;
-    background: url(../../src/assets/logo.png);
+    
     background-size: cover;
     margin: 15px 20px 60px 60px ;
     float: left;

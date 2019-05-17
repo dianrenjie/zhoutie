@@ -14,6 +14,7 @@ Vue.use(Vue2OrgTree);
 Vue.prototype.$axios=axios;
 Vue.prototype.qs = QS;
 Vue.prototype.header={'Content-Type':'application/x-www-form-urlencoded'};
+Vue.prototype.imgpath="https://zhoutie.xiaohecheng.com"
 Vue.use(ElementUI);
 
 

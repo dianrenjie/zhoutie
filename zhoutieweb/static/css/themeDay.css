@@ -17,8 +17,14 @@
 }
 .title{
     margin-left: 20px;
+    color: black;
 }
 .time{
     margin-left: 100px;
     color: #A2A1A1;
+}
+a{
+    text-decoration:none;
+     outline: none;
+     
 }

@@ -15,6 +15,7 @@
     font-family: '黑体';
     width: 60%;
     margin: auto;
+    text-align: center;
 }
 .time{
     padding-top: 40px;
@@ -31,7 +32,5 @@
 .text{
     width: 58%;
     margin: auto;
-    line-height: 40px;
-    color: rgb(104, 104, 104);
-    padding-right: 10%;
+    
 }
