@@ -8,7 +8,6 @@ import partyAssist from '@/components/partyAssist'
 import partyText from '@/components/partyText'
 import cost from '@/components/cost'
 import partyMember from '@/components/partyMember'
-import jiaGou from "@/components/jiagou"
 import threeClass from '@/components/threeClass'
 
 
