@@ -72,7 +72,21 @@ export default {
       ]
     };
   },
+  mounted(){
+var _this = this;
+    var data = this.qs.stringify({ organ_id: "1" });
+    this.$axios({
+      url: "/api/api/member_list",
+      header: _this.header,
+      method: "POST",
+      data: data
+    }).then(function(res) {
+      console.log(res.data);
+      _this.list = res.data.data;
+    });
+  },
   methods: {
+    
     partyTime(row, column) {
       return row.partyTime;
     }, 
