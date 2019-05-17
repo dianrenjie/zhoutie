@@ -11,7 +11,7 @@
                 <a href="#/home/zhendi"><img src="../assets/chendi.png" alt=""><span>陈地建设</span></a>
             </li>
             <li class="lists">
-                <a href="#"><img src="../assets/sanhui.png" alt=""><span>三会一课</span></a>
+                <a href="#/home/threeClass"><img src="../assets/sanhui.png" alt=""><span>三会一课</span></a>
             </li>
             <li class="lists">
                 <a href="#/home/themeday"><img src="../assets/dangri.png" alt=""><span>主题党日</span></a>
