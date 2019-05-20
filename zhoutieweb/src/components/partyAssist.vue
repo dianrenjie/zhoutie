@@ -21,6 +21,7 @@
   
 </template>
 <script>
+import { mapState,mapMutations } from 'vuex'
 export default {
     data(){
         return{
@@ -33,9 +34,12 @@ export default {
       window.location.href = "#/home/partyText?type=2&id=" + id;
     }
   },
+   computed:{
+...mapState(["organ_id"])
+  },
   mounted() {
     var _this = this;
-    var data = this.qs.stringify({ organ_id: "13" });
+    var data = this.qs.stringify({ organ_id:this.organ_id});
     this.$axios({
       url: "/api/api/help_list",
       header: _this.header,

@@ -11,6 +11,7 @@
   </div>
 </template>
 <script>
+import { mapState,mapMutations } from 'vuex'
 export default {
   data() {
     return {
@@ -18,9 +19,12 @@ export default {
       imgpath:this.imgpath
     };
   },
+   computed:{
+...mapState(["organ_id"])
+  },
   mounted(){
     var _this = this;
-    var data = this.qs.stringify({ organ_id: "14" });
+    var data = this.qs.stringify({ organ_id:this.organ_id});
     this.$axios({
       url: "/api/api/camp_list",
       header: _this.header,

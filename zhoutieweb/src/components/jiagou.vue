@@ -72,9 +72,11 @@
   </div>
 </template>
 <script>
+import { mapState,mapMutations } from 'vuex'
 export default {
   data() {
     return {
+      organ_id:this.$route.query.id,
       data: {
         id: 0,
         label: "XXX科技有限公司",
@@ -100,8 +102,14 @@ export default {
     };
   },
 
-  mountrd() {},
+  mounted() {
+    console.log("asdfsdf")
+    console.log(this.organ_id)
+    this.showId(this.organ_id)
+    
+  },
   methods: {
+    ...mapMutations(['showId']),
     onExpand(data) {
       if ("expand" in data) {
         data.expand = !data.expand;

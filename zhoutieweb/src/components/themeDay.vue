@@ -10,6 +10,7 @@
   </div>
 </template>
 <script>
+import { mapState,mapMutations } from 'vuex'
 export default {
   data() {
     return {
@@ -40,10 +41,13 @@ export default {
       // }
     };
   },
+  computed:{
+...mapState(["organ_id"])
+  },
   methods: {
     getData() {
       var _this = this;
-      var data=this.qs.stringify({organ_id:"14"})
+      var data=this.qs.stringify({organ_id:this.organ_id})
       this.$axios({
         url: "/api/api/news_list",
         header:_this.header,
@@ -58,6 +62,7 @@ export default {
     
   },
   mounted() {
+    console.log(this.organ_id)
       this.getData();
       
       
