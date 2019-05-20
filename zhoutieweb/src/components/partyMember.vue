@@ -87,3 +87,6 @@ export default {
   }
 };
 </script>
+<style scoped>
+@import url("../../static/css/partyMember.css");
+</style>
