@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-table ref="filterTable" :data="list" style="width: 80%;margin: 20px auto;">
+    <el-table ref="filterTable" :data="arr" style="width: 80%;margin: 20px auto;">
       <el-table-column prop="id" label="序号" width="180" column-key="id"></el-table-column>
       <el-table-column prop="realname" label="党员名称" width="180"></el-table-column>
       <el-table-column
@@ -47,7 +47,7 @@ export default {
       method: "POST",
       data: data
     }).then(function(res) {
-      console.log(res.data);
+      console.log(res.data);    
       _this.list = res.data.data;
     });
   },
