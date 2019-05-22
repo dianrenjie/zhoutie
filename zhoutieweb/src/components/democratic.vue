@@ -21,7 +21,7 @@
           </div>
           <div class="number">
             <p class="person">3166</p>
-            <p class="name">党员总数</p>
+            <p class="name">预备党员数</p>
           </div>
         </div>
         <div class="statistics">
@@ -30,7 +30,7 @@
           </div>
           <div class="number">
             <p class="person">3166</p>
-            <p class="name">党员总数</p>
+            <p class="name">参加人数</p>
           </div>
         </div>
         <div class="statistics">
@@ -39,7 +39,7 @@
           </div>
           <div class="number">
             <p class="person">3166</p>
-            <p class="name">党员总数</p>
+            <p class="name">书面汇报人数</p>
           </div>
         </div>
       </div>
