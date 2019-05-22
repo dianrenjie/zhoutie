@@ -78,7 +78,7 @@
             <el-table-column prop="time" label="入党时间" width="120"></el-table-column>
             <el-table-column prop="post" label="岗位" width="200"></el-table-column>
             <el-table-column prop="cause" label="不合格原因" width="450"></el-table-column>
-            <el-table-column prop="result" label="处理结果" ></el-table-column>
+            <el-table-column prop="result" label="处理结果"></el-table-column>
           </el-table>
         </template>
       </div>
@@ -90,19 +90,39 @@
   </div>
 </template>
 <script>
+import { mapState, mapMutations } from "vuex";
 export default {
-        data() {
-      return {
-         organ_id:this.$route.query.id,
-        tableData: [{
-          date: '2016-05-02',
-          time: '王小虎',
-          post: '村长',
-          cause: '工作不认真',
-          result: 'pass',
-        }]
-      }
-    }
+  data() {
+    return {
+      organ_id: this.$route.query.id,
+      tableData: [
+        {
+          date: "2016-05-02",
+          time: "王小虎",
+          post: "村长",
+          cause: "工作不认真",
+          result: "pass"
+        }
+      ]
+    };
+  },
+  mounted() {
+    this.showId(this.organ_id)
+    var _this = this;
+    var data = this.qs.stringify({ organ_id: this.organ_id });
+    this.$axios({
+      url: "https://zhoutie.xiaohecheng.com/api/api/appraise_list",
+      header: _this.header,
+      method: "POST",
+      data: data
+    }).then(function(res) {
+      console.log(res.data);
+      _this.arr = res.data.data;
+    });
+  },
+  methods:{
+    ...mapMutations(['showId'])
+  }
 };
 </script>
 <style scoped>

@@ -1,127 +1,78 @@
 <template>
   <div>
     <div class="all-box">
-      <div class="one-title title">党总支部书记：佃仁杰</div>
+      <div class="one-title title">{{show==true?"党总支部书记":"党支部书记"}}：{{show==true?allbranch:onebranch}}</div>
       <div class="border"></div>
-      <div class="two-title title">党总支部副书记：佃仁杰</div>
-       <div class="border"></div>
-       <div class="title-box">
-           <div class="three-title">
-             委员：佃仁杰
-           </div>
-            <div class="three-title">
-             委员：佃仁杰
-           </div>
-            <div class="three-title">
-             委员：佃仁杰
-           </div>
-            <div class="three-title">
-             委员：佃仁杰
-           </div>
-            <div class="three-title">
-             委员：佃仁杰
-           </div>
-            <div class="three-title">
-             委员：佃仁杰
-           </div>
-            <div class="three-title">
-             委员：佃仁杰
-           </div>
-            <div class="three-title">
-             委员：佃仁杰
-           </div>
-           
-       </div>
-       <div class="border"></div>
-       <div class="title-box">
-           <div class="three-title">
-             XX支部书记：<br>
-             佃仁杰
-           </div>
-            <div class="three-title">
-             XX支部书记：<br>
-             佃仁杰
-           </div>
-           <div class="three-title">
-             XX支部书记：<br>
-             佃仁杰
-           </div>
-           <div class="three-title">
-             XX支部书记：<br>
-             佃仁杰
-           </div>
-           <div class="three-title">
-             XX支部书记：<br>
-             佃仁杰
-           </div>
-           <div class="three-title">
-             XX支部书记：<br>
-             佃仁杰
-           </div>
-           <div class="three-title">
-             XX支部书记：<br>
-             佃仁杰
-           </div>
-           <div class="three-title">
-             XX支部书记：<br>
-             佃仁杰
-           </div>
-           
-       </div>
+      <div class="two-title title">{{show==true?"党总支部副书记":"党支部副书记"}}：{{show==true?fuallbranch:fuonebranch}}</div>
+      <div class="border"></div>
+      <div class="title-box">
+        <div v-for="(v,i) in weiyuan" :key="(v,i)" class="three-title">{{v.r_name}}：{{v.realname}}</div>
+      </div>
+      <div class="border" v-if="show"></div>
+      <div class="title-box" v-if="show">
+        <div v-for="(v,i) in branch" :key="(v,i)" class="three-title">
+          {{v.r_name}}：
+          <br>{{v.realname}}
+        </div>
+       
+      </div>
     </div>
   </div>
 </template>
 <script>
-import { mapState,mapMutations } from 'vuex'
+import { mapState, mapMutations } from "vuex";
 export default {
   data() {
     return {
-      organ_id:this.$route.query.id,
-      data: {
-        id: 0,
-        label: "XXX科技有限公司",
-        children: [
-          {id:0,
-          label:"redregrf",
-          children:[
-
-              {
-            id: 2,
-            label: "产品研发部   |  当副手到附近 | 当副手到附近 |当副手到附近 | 当副手到附近 | 当副手到附近 | 当副手到附近 | 当副手到附近 | 当副手到附近",
-            
-          },
-          
-          ]
-          }
-        ]
-      },
-      horizontal: false,
-      collapsable: true,
-      expandAll: false,
-      labelClassName: "bg-white"
+      organ_id: this.$route.query.id,
+      weiyuan: [],
+      branch: [],
+      allbranch:"",
+      fuallbranch:"",
+      show:false,
+      onebranch:"",
+      fuonebranch:""
     };
   },
 
   mounted() {
-    
-    this.showId(this.organ_id)
-    
+    this.showId(this.organ_id);
+    var that = this;
+    var data = this.qs.stringify({ organ_id: that.organ_id });
+    this.$axios({
+      url: "https://zhoutie.xiaohecheng.com/api/api/organ_list",
+      header: that.header,
+      method: "POST",
+      data: data
+    }).then(res => {
+      console.log(res.data);
+      var data = res.data.data;
+      
+      for (var i = 0; i < data.length; i++) {
+        if (data[i].r_name == "委员") {
+          that.weiyuan.push(data[i]);
+        }
+        if (data[i].r_name == "党总支部书记") {
+          that.show=true
+        }
+        if (data[i].r_name == "党支部书记") {
+          that.branch.push(data[i]);
+          that.onebranch=data[i].realname
+        }
+         if (data[i].r_name == "党总支部书记") {
+          that.allbranch=data[i].realname
+        }
+        if (data[i].r_name == "党总支部副书记") {
+          that.fubranch=data[i].realname
+        }
+        if (data[i].r_name == "党支部副书记") {
+          that.fuonebranch=data[i].realname
+        }
+      }
+    });
   },
   methods: {
-    ...mapMutations(['showId']),
-    onExpand(data) {
-      if ("expand" in data) {
-        data.expand = !data.expand;
-        if (!data.expand && data.children) {
-          this.collapse(data.children);
-        }
-      } else {
-        this.$set(data, "expand", true);
-      }
-    },
-    onNodeClick(e, data) {
-      alert(data.label);
-    }
+    ...mapMutations(["showId"])
   }
 };
 </script>
