@@ -3,7 +3,7 @@
     <ul class="cont-box">
       <li v-for="(v,i) in arr" :key="(v,i)">
         <img src="../assets/disc.png" alt>
-        <a :href="`#/home/partyText?type=1&id=${v.id}`"><span class="title">{{v.title}}</span></a>
+        <a :href="`#/home/partyText?type=1&organ=${organ_id}&id=${v.id}`"><span class="title">{{v.title}}</span></a>
         <span class="time">{{v.time}}</span>
       </li>
     </ul>
@@ -14,6 +14,7 @@ import { mapState,mapMutations } from 'vuex'
 export default {
   data() {
     return {
+      organ_id:this.$route.query.id,
       arr: []
       // {
       //   name: "学习《关于新形势下党内政治生活的去哦干标准》",
@@ -41,15 +42,14 @@ export default {
       // }
     };
   },
-  computed:{
-...mapState(["organ_id"])
-  },
+  
   methods: {
+    ...mapMutations(['showId']),
     getData() {
       var _this = this;
       var data=this.qs.stringify({organ_id:this.organ_id})
       this.$axios({
-        url: "/api/api/news_list",
+        url: "https://zhoutie.xiaohecheng.com/api/api/news_list",
         header:_this.header,
         method: "POST",
         data: data
@@ -62,6 +62,7 @@ export default {
     
   },
   mounted() {
+    this.showId(this.organ_id)
     console.log(this.organ_id)
       this.getData();
       

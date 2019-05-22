@@ -6,7 +6,10 @@
           <ul class="cont-box">
             <li v-for="(v,i) in arr" :key="(v,i)">
               <img src="../assets/disc.png" alt>
-              <span class="title">{{v.title}}</span>
+              <a :href="`#/home/partyText?type=3&id=${v.id}`">
+                <span class="title">{{v.title}}</span>
+              </a>
+
               <span class="time">{{v.time}}</span>
             </li>
           </ul>
@@ -22,35 +25,12 @@
   </div>
 </template>
 <script>
+import { mapState, mapMutations } from "vuex";
 export default {
   data() {
     return {
-      arr: [
-        {
-          title: "学习《关于新形势下党内政治生活的去哦干标准》",
-          time: "2019-05-07"
-        },
-        {
-          title: "学习《关于新形势下党内政治生活的去哦干标准》",
-          time: "2019-05-07"
-        },
-        {
-          title: "学习《关于新形势下党内政治生活的去哦干标准》",
-          time: "2019-05-07"
-        },
-        {
-          title: "学习《关于新形势下党内政治生活的去哦干标准》",
-          time: "2019-05-07"
-        },
-        {
-          title: "学习《关于新形势下党内政治生活的去哦干标准》",
-          time: "2019-05-07"
-        },
-        {
-          title: "学习《关于新形势下党内政治生活的去哦干标准》",
-          time: "2019-05-07"
-        }
-      ],
+       organ_id:this.$route.query.id,
+      arr: [],
       tableData: [
         {
           month: "一月",
@@ -59,7 +39,6 @@ export default {
         {
           month: "二月",
           clean: "十九大报告精神"
-
         },
         {
           month: "三月",
@@ -71,6 +50,24 @@ export default {
         }
       ]
     };
+  },
+  
+  mounted() {
+    this.showId(this.organ_id)
+    var _this = this;
+    var data = this.qs.stringify({ organ_id: this.organ_id });
+    this.$axios({
+      url: "https://zhoutie.xiaohecheng.com/api/api/threeone_list",
+      header: _this.header,
+      method: "POST",
+      data: data
+    }).then(function(res) {
+      console.log(res.data);
+      _this.arr = res.data.data;
+    });
+  },
+  methods:{
+    ...mapMutations(['showId'])
   }
 };
 </script>

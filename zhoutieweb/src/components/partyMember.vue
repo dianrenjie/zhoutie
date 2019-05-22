@@ -30,19 +30,22 @@
 </template>
 
 <script>
+import { mapState,mapMutations } from 'vuex'
 export default {
   data() {
     return {
+       organ_id:this.$route.query.id,
       list: [],
       currentpage: 1,
       value: "5"
     };
   },
   mounted() {
+    this.showId(this.organ_id)
     var _this = this;
-    var data = this.qs.stringify({ organ_id: "1" });
+    var data = this.qs.stringify({ organ_id:this.organ_id });
     this.$axios({
-      url: "/api/api/member_list",
+      url: "https://zhoutie.xiaohecheng.com/api/api/member_list",
       header: _this.header,
       method: "POST",
       data: data
@@ -63,7 +66,8 @@ export default {
     },
     filterTag(value, row) {
       return row.gender === value;
-    }
+    },
+    ...mapMutations(['showId'])
   },
   computed: {
     //分页

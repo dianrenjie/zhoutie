@@ -34,6 +34,7 @@
 export default {
   data() {
     return {
+       organ_id:this.$route.query.id,
       tableData: [
 
       ]

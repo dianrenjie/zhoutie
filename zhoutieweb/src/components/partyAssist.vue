@@ -25,6 +25,7 @@ import { mapState,mapMutations } from 'vuex'
 export default {
     data(){
         return{
+           organ_id:this.$route.query.id,
             list:[],
             imgpath:this.imgpath
         }
@@ -32,16 +33,16 @@ export default {
   methods: {
     skip(id) {
       window.location.href = "#/home/partyText?type=2&id=" + id;
-    }
+    },
+    ...mapMutations(['showId'])
   },
-   computed:{
-...mapState(["organ_id"])
-  },
+   
   mounted() {
+    this.showId(this.organ_id)
     var _this = this;
     var data = this.qs.stringify({ organ_id:this.organ_id});
     this.$axios({
-      url: "/api/api/help_list",
+      url: "https://zhoutie.xiaohecheng.com/api/api/help_list",
       header: _this.header,
       method: "POST",
       data: data

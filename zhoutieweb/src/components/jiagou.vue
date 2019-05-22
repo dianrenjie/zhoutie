@@ -103,8 +103,7 @@ export default {
   },
 
   mounted() {
-    console.log("asdfsdf")
-    console.log(this.organ_id)
+    
     this.showId(this.organ_id)
     
   },

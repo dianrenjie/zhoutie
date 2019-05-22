@@ -93,6 +93,7 @@
 export default {
         data() {
       return {
+         organ_id:this.$route.query.id,
         tableData: [{
           date: '2016-05-02',
           time: '王小虎',
