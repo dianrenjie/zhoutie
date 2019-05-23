@@ -86,6 +86,7 @@
 }
 .right{
     margin-left: 2%;
+    overflow: hidden;
 }
 .left_title{
     height: 40px;
