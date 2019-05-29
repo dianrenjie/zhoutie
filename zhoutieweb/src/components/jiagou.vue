@@ -63,7 +63,7 @@ export default {
           that.allbranch=data[i].realname
         }
         if (data[i].r_name == "党总支部副书记") {
-          that.fubranch=data[i].realname
+          that.fuallbranch=data[i].realname
         }
         if (data[i].r_name == "党支部副书记") {
           that.fuonebranch=data[i].realname

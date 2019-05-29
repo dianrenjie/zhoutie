@@ -34,3 +34,14 @@
     margin: auto;
     
 }
+.see_file{
+    display: inline-block;
+    padding: 10px 30px;
+    background: red;
+    color: white;
+    margin-left: 47%;
+    margin-top: 20px;
+    text-decoration:none;
+    
+    
+}

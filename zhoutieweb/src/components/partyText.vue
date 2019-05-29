@@ -18,6 +18,7 @@
     <div class="text" v-html="text.content">
      
     </div>
+    <a v-if="text.file!=null" class="see_file" :href="text.file.indexOf('http')==-1?imgpath+text.file:text.file">查看文件</a>
   </div>
 </template>
 

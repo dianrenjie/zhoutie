@@ -6,7 +6,7 @@
       <p class="month">{{v.time.slice(0,7)}}</p>
     </div>
     <div class="img">
-      <img :src="imgpath+v.image" alt>
+      <img :src="v.image.indexOf('http')==-1?imgpath+v.image:v.image" alt>
     </div>
     <div class="r_content">
       <div class="title">
