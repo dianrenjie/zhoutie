@@ -1,12 +1,22 @@
 <template>
   <div class="wrap">
+    <div class="disc_box">
+<img class="disc" src="../assets/disc1.png" alt>党员大会
+    <img class="disc" src="../assets/disc2.png" alt>支部委员会
+    <img class="disc" src="../assets/disc3.png" alt>党小组会
+    <img class="disc" src="../assets/disc4.png" alt>党课
+    </div>
+    
     <el-tabs type="border-card">
       <el-tab-pane label="学习内容">
         <div>
           <ul class="cont-box">
             <li v-for="(v,i) in arr" :key="(v,i)">
-              <img src="../assets/disc.png" alt>
-              <a :href="`#/home/partyText?type=3&id=${v.id}`">
+              <img v-if="v.type_id==1" src="../assets/disc1.png" alt>
+              <img v-if="v.type_id==2" src="../assets/disc2.png" alt>
+              <img v-if="v.type_id==3" src="../assets/disc3.png" alt>
+              <img v-if="v.type_id==4" src="../assets/disc4.png" alt>
+              <a :href="`#/home/partyText?organ=${organ_id}&type=3&id=${v.id}`">
                 <span class="title">{{v.title}}</span>
               </a>
 

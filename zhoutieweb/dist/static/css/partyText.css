@@ -1,0 +1,47 @@
+.box{
+    padding-bottom: 150px;
+}
+.hint{
+    width: 81%;
+    height: 45px;
+    margin: 40px auto;
+    color: rgb(154, 154, 154);
+}
+.return{
+    cursor:pointer;
+}
+.title{
+    font-size: 24px;
+    font-family: '黑体';
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+.time{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 35%;
+    margin: auto;
+    text-align: right;
+    color: red;
+}
+.time img{
+    margin: -4px auto;
+    padding-left: 15px;
+}
+.text{
+    width: 58%;
+    margin: auto;
+    
+}
+.see_file{
+    display: inline-block;
+    padding: 10px 30px;
+    background: red;
+    color: white;
+    margin-left: 47%;
+    margin-top: 20px;
+    text-decoration:none;
+    
+    
+}

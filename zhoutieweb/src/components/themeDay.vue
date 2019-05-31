@@ -2,7 +2,7 @@
   <div>
     <ul class="cont-box">
       <li v-for="(v,i) in arr" :key="(v,i)">
-        <img src="../assets/disc.png" alt>
+        <img src="../assets/disc4.png" alt>
         <a :href="`#/home/partyText?type=1&organ=${organ_id}&id=${v.id}`"><span class="title">{{v.title}}</span></a>
         <span class="time">{{v.time}}</span>
       </li>

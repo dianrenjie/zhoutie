@@ -32,7 +32,7 @@ export default {
     },
   methods: {
     skip(id) {
-      window.location.href = "#/home/partyText?type=2&id=" + id;
+      window.location.href = "#/home/partyText?organ="+this.organ_id+"&type=2&id=" + id;
     },
     ...mapMutations(['showId'])
   },

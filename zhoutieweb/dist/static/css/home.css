@@ -1,0 +1,12 @@
+.left{
+    width: 18%;
+    float: left;		
+    
+}
+.right{
+    width: 82%;
+    float: left;
+    background: url("../../src/assets/rightbackground.png");
+    background-repeat:no-repeat;
+    background-size: 100% 100%; 
+}

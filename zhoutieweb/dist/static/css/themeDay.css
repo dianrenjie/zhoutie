@@ -1,0 +1,30 @@
+.cont-box{
+    
+    width:95%;
+    margin: auto;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.cont-box li img{
+    width:7px;
+    height:7px;
+}
+.cont-box li{
+    
+    height:50px;
+   
+    
+}
+.title{
+    margin-left: 20px;
+    color: black;
+}
+.time{
+    margin-left: 100px;
+    color: #A2A1A1;
+}
+a{
+    text-decoration:none;
+     outline: none;
+     
+}
